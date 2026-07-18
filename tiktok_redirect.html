@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Redirection...</title>
+</head>
+<body>
+<p>Redirection vers l'application locale...</p>
+<script>
+  // TikTok redirige ici en HTTPS (obligatoire côté TikTok) avec ?code=...&state=...
+  // On rebondit vers le petit serveur local qui attend sur localhost:8766.
+  window.location.replace("http://localhost:8766/" + window.location.search);
+</script>
+</body>
+</html>

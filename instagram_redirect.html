@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Redirection...</title>
+</head>
+<body>
+<p>Redirection vers l'application locale...</p>
+<script>
+  // Meta (Instagram/Facebook Login) redirige ici en HTTPS avec ?code=...&state=...
+  // On rebondit vers le petit serveur local qui attend sur localhost:8767.
+  // Port distinct de TikTok (8766) pour éviter toute collision si jamais les deux
+  // flows tournaient un jour au même moment (en pratique, jamais concurrent).
+  window.location.replace("http://localhost:8767/" + window.location.search);
+</script>
+</body>
+</html>
